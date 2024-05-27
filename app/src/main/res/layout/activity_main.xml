@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hahaha"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/welcometxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Green House"
+        android:layout_centerHorizontal="true"
+        android:textColor="#B5EC75"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_corners"
+        android:padding="30dp"
+        android:elevation="150dp"
+        android:textStyle="bold" />
+    <Spinner
+        android:id="@+id/customSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/welcometxt"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@drawable/spinner_background"
+        android:popupBackground="@drawable/spinner_popup_background"/>
+
+    <RelativeLayout
+        android:id="@+id/roomcondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customSpinner"
+        android:visibility="visible"
+        android:elevation="100dp"
+        android:layout_marginTop="30dp">
+        <RelativeLayout
+            android:id="@+id/reltempurature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progresstempurature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:progress="10"
+                app:indicatorSize="120dp"
+                app:trackThickness="20dp"
+                app:trackColor="#B1D2E1" />
+
+            <TextView
+                android:id="@+id/progressTempuraturetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0°C"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/Tempuraturetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tempurature"
+            android:layout_below="@id/reltempurature"
+           android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            android:textColor="#ffffffff"/>
+
+        <RelativeLayout
+            android:id="@+id/relhumidityenv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Tempuraturetxt"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progresshumidityenv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:progress="10"
+                app:indicatorSize="120dp"
+                app:trackThickness="20dp"
+                app:trackColor="#B1D2E1" />
+
+            <TextView
+                android:id="@+id/progresshumiditytxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true" />
+
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Environment Humidity"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/relhumidityenv"
+            android:layout_marginRight="5dp"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            android:textColor="#ffffffff"/>
+
+        <RelativeLayout
+            android:id="@+id/relhumiditysoil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Tempuraturetxt"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progresshumiditysoil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:progress="10"
+                app:indicatorSize="120dp"
+                app:trackThickness="20dp"
+                app:trackColor="#B1D2E1" />
+
+            <TextView
+                android:id="@+id/progresshumiditysoiltxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true" />
+
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/humiditysoiltxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soil Humidity"
+            android:layout_below="@id/relhumiditysoil"
+            android:layout_marginLeft="35dp"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            android:textColor="#ffffffff"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/Vontilateur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customSpinner"
+        android:visibility="gone"
+        android:elevation="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/reltempuratureVon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progresstempuratureVon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:progress="10"
+                app:indicatorSize="120dp"
+                app:trackThickness="20dp"
+                app:trackColor="#B1D2E1" />
+
+            <TextView
+                android:id="@+id/progressTempuraturetxtVon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0°C"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/TempuraturetxtVon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tempurature"
+            android:layout_below="@id/reltempuratureVon"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            android:textColor="#ffffffff"/>
+        <Button
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:id="@+id/VontilateurBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Run Vontilateur"
+            android:textSize="25dp"
+            android:textColor="#ffffffff"
+            android:layout_below="@id/TempuraturetxtVon"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/adviceVon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Advice :"
+            android:layout_below="@id/VontilateurBtn"
+            android:textSize="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:textColor="#5AB8E3"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/Pompe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customSpinner"
+        android:visibility="gone"
+        android:elevation="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/relhumiditypompe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progresshumdityPompe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:progress="10"
+                app:indicatorSize="120dp"
+                app:trackThickness="20dp"
+                app:trackColor="#B1D2E1" />
+
+            <TextView
+                android:id="@+id/progresshumdityTxtPompe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/humditytxtPompe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Humidity"
+            android:layout_below="@id/relhumiditypompe"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            android:textColor="#ffffffff"/>
+        <Button
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:id="@+id/PompeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Run Pompe"
+            android:textSize="25dp"
+            android:textColor="#ffffffff"
+            android:layout_below="@id/humditytxtPompe"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/advicePompe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Advice :"
+            android:layout_below="@id/PompeBtn"
+            android:textSize="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:textColor="#5AB8E3"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/Ia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customSpinner"
+        android:visibility="gone"
+        android:elevation="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/buttonChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Image"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/Planeteimg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/buttonChoose"
+            android:src="@drawable/tomate"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultdisease"
+            android:layout_below="@id/Planeteimg"
+            android:layout_centerHorizontal="true"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginTop="35dp"
+            android:text="Result"
+            android:textColor="#ffffff"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "77322547840",
+    "firebase_url": "https://chaimaproject-f9eaf-default-rtdb.firebaseio.com",
+    "project_id": "chaimaproject-f9eaf",
+    "storage_bucket": "chaimaproject-f9eaf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77322547840:android:f0ad16457abcdf6cf8ec65",
+        "android_client_info": {
+          "package_name": "com.example.chaimaprojet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP-uIOT0r5Q-StgG1S7d2Qm-y3rTOwMv8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77322547840:android:36a6499fecca3563f8ec65",
+        "android_client_info": {
+          "package_name": "com.example.ultimateone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP-uIOT0r5Q-StgG1S7d2Qm-y3rTOwMv8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login"
+    android:background="@drawable/hahaha">
+    <TextView
+        android:id="@+id/welcometxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi . You Need to sign in "
+        android:layout_centerHorizontal="true"
+        android:textColor="#B5EC75"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_corners"
+        android:padding="30dp"
+        android:elevation="150dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/emailtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email :"
+        android:textSize="24dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textColor="#ffffffff"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password :"
+        android:textSize="24dp"
+        android:layout_below="@id/emailtxt"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        android:textColor="#ffffffff"/>/>
+        
+    <EditText
+        android:id="@+id/emailfield"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="200dp"
+        android:minHeight="20dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/edittext_border"
+        android:hint="Enter Email"
+        android:textSize="24dp"
+        android:textColorHint="#757575" 
+        android:layout_marginLeft="130dp"/>
+    <EditText
+        android:id="@+id/password_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="200dp"
+        android:minHeight="20dp"
+        android:layout_below="@id/emailfield"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_border"
+        android:inputType="textPassword"
+        android:hint="Enter password"
+        android:textSize="24dp"
+        android:textColorHint="#757575" />
+
+    <Button
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:id="@+id/signButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:textSize="24dp"
+        android:layout_below="@id/password_field"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        />
+
+
+</RelativeLayout>
